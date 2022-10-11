@@ -1,624 +1,228 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portafolio Luis Rangel</title>
-    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
-</head>
+    <link
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
 
-<body class="fondo">
-
-    <style>
-        :root {
-      --navbar-header: 60px;
-    }
-
-    body {
-      margin: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    }
-
-    h1 {
-      text-align: center;
-    }
-
-    .navbar {
-      position: fixed;
-      top: 0;
-      background: rgb(255, 255, 255);
-      background: linear-gradient(4deg, rgb(255, 255, 255) 57%, rgb(112, 245, 255) 100%);
-      width: 100%;
-      height: var(--navbar-header);
-      border-bottom: 1px solid #ccc;
-      z-index: 2;
-    }
-
-    .navbar__interior {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      height: inherit;
-      max-width: 650px;
-      margin: 0 auto;
-    }
-
-    .navbar__interior i,  .navbar__interior span{
-        color: #060606;
-    }
-
-    .navbar__logo {
-      padding-left: 20px;
-    }
-
-    .navbar__logo a {
-      text-decoration: none;
-      font-weight: 600;
-      display: flex;
-      align-items: center;
-      gap: .25rem;
-    }
-
-    .navbar__lista {
-      display: flex;
-      align-items: center;
-      gap: 1.5rem;    
-    }
-
-    .navbar__link {
-      text-decoration: none;
-      color: #060606;
-      font-weight: 700;
-      transition: .2s ease-in-out;
-    }
-
-    .navbar__link:hover {
-      color: #333;
-    }
-
-    .navbar__cerrar {
-      display: none;
-    }
-
-    .navbar__btn-accion {
-      display: none;
-    }
-
-    /* Mobile First */
-    @media (max-width: 600px) {
-      .navbar__menu {
-        position: fixed;
-        left: 0;
-        top: -100%;
-        width: 100%;
-        background-color: #fff;
-        border-radius: 0 0 12px 12px;
-        padding: 70px 0 40px;
-        box-shadow: 1px 1px 16px -4px #fffff;
-        transition: .3s ease-in-out;
-      }
-
-      .navbar__menu.mostrar__menu {
-        top: 0;
-      }
-
-      .navbar__lista {
-        flex-direction: column;
-      }
-
-      .navbar__cerrar {
-        position: absolute;
-        display: inline-block;
-        top: 20px;
-        right: 20px;
-        background-color: transparent;
-        border: none;
-        font-size: 24px;
-        cursor: pointer;
-      }
-
-      .navbar__btn {
-        padding-right: 20px;
-      }
-
-      .navbar__btn-accion {
-        background-color: transparent;
-        border: none;
-        font-size: 24px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-      }
-    }
-
-    .contenedor__todo {
-      margin-top: calc(20px + var(--navbar-header));
-    }
-
-    @media (min-width: 600px) {
-      :root {
-        --navbar-header: 80px;
-      }
-    }
-    </style>
-
-<div class="navbar">
-    <div class="navbar__interior">
-      <div class="navbar__logo">
-        <a href="/">
-          <i class='bx bxs-mouse-alt'></i>
-          <span>LuisKR</span>
-        </a>
-      </div>
-      <div id="navbar__menu" class="navbar__menu">
-        <button id="navbar__cerrar" class="navbar__cerrar">
-          <i class='bx bx-x'></i>
-        </button>
-        <nav class="navbar__lista">
-          <a href="#" class="navbar__link">Home</a>
-          <a href="#" class="navbar__link">About</a>
-          <a href="#" class="navbar__link">Skills</a>
-          <a href="#" class="navbar__link">Projects</a>
-        </nav>
-      </div>
-      <div class="navbar__btn">
-        <button id="navbar__btn" class="navbar__btn-accion">
-          <i class='bx bx-menu'></i>
-        </button>
-      </div>
-    </div>
-  </div>
-
-  <script>
-    const menu = document.getElementById('navbar__menu')
-    const abrir = document.getElementById('navbar__btn')
-    const cerrar = document.getElementById('navbar__cerrar')
-
-    abrir.addEventListener('click', (e) => {
-      menu.classList.add('mostrar__menu')
-    })
-
-    cerrar.addEventListener('click', (e) => {
-      menu.classList.remove('mostrar__menu')
-    })
-  </script>
-
- <div class="contenedor__todo">
-
-    
-    <h1>Hello, Welcome</h1>
-    
-    
-    <style>
-        img {
-            width: 100%;
-        }
-
-        h1 {
-            text-align: center;
-            font-family: 'conforta', cursive;
-        }
-
-        .fondo{
-            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1024%26quot%3b)' fill='none'%3e%3cpath d='M806 442L1179 69' stroke-width='10' stroke='url(%23SvgjsLinearGradient1025)' stroke-linecap='round' class='TopRight'%3e%3c/path%3e%3cpath d='M355 15L193 177' stroke-width='8' stroke='url(%23SvgjsLinearGradient1025)' stroke-linecap='round' class='TopRight'%3e%3c/path%3e%3cpath d='M552 329L166 715' stroke-width='6' stroke='url(%23SvgjsLinearGradient1026)' stroke-linecap='round' class='BottomLeft'%3e%3c/path%3e%3cpath d='M555 143L217 481' stroke-width='8' stroke='url(%23SvgjsLinearGradient1025)' stroke-linecap='round' class='TopRight'%3e%3c/path%3e%3cpath d='M632 27L471 188' stroke-width='10' stroke='url(%23SvgjsLinearGradient1026)' stroke-linecap='round' class='BottomLeft'%3e%3c/path%3e%3cpath d='M927 187L776 338' stroke-width='10' stroke='url(%23SvgjsLinearGradient1026)' stroke-linecap='round' class='BottomLeft'%3e%3c/path%3e%3cpath d='M887 262L1086 63' stroke-width='6' stroke='url(%23SvgjsLinearGradient1025)' stroke-linecap='round' class='TopRight'%3e%3c/path%3e%3cpath d='M1429 36L1663 -198' stroke-width='10' stroke='url(%23SvgjsLinearGradient1026)' stroke-linecap='round' class='BottomLeft'%3e%3c/path%3e%3cpath d='M1338 277L1665 -50' stroke-width='6' stroke='url(%23SvgjsLinearGradient1025)' stroke-linecap='round' class='TopRight'%3e%3c/path%3e%3cpath d='M196 187L-84 467' stroke-width='6' stroke='url(%23SvgjsLinearGradient1025)' stroke-linecap='round' class='TopRight'%3e%3c/path%3e%3cpath d='M409 79L601 -113' stroke-width='10' stroke='url(%23SvgjsLinearGradient1026)' stroke-linecap='round' class='BottomLeft'%3e%3c/path%3e%3cpath d='M268 145L430 -17' stroke-width='6' stroke='url(%23SvgjsLinearGradient1025)' stroke-linecap='round' class='TopRight'%3e%3c/path%3e%3cpath d='M592 462L306 748' stroke-width='8' stroke='url(%23SvgjsLinearGradient1025)' stroke-linecap='round' class='TopRight'%3e%3c/path%3e%3cpath d='M1048 320L1264 104' stroke-width='8' stroke='url(%23SvgjsLinearGradient1026)' stroke-linecap='round' class='BottomLeft'%3e%3c/path%3e%3cpath d='M109 413L-75 597' stroke-width='6' stroke='url(%23SvgjsLinearGradient1026)' stroke-linecap='round' class='BottomLeft'%3e%3c/path%3e%3cpath d='M142 162L-23 327' stroke-width='8' stroke='url(%23SvgjsLinearGradient1025)' stroke-linecap='round' class='TopRight'%3e%3c/path%3e%3cpath d='M667 163L809 21' stroke-width='10' stroke='url(%23SvgjsLinearGradient1025)' stroke-linecap='round' class='TopRight'%3e%3c/path%3e%3cpath d='M304 247L474 77' stroke-width='6' stroke='url(%23SvgjsLinearGradient1025)' stroke-linecap='round' class='TopRight'%3e%3c/path%3e%3cpath d='M1089 395L1239 245' stroke-width='6' stroke='url(%23SvgjsLinearGradient1025)' stroke-linecap='round' class='TopRight'%3e%3c/path%3e%3cpath d='M191 521L446 266' stroke-width='10' stroke='url(%23SvgjsLinearGradient1026)' stroke-linecap='round' class='BottomLeft'%3e%3c/path%3e%3cpath d='M997 310L1355 -48' stroke-width='8' stroke='url(%23SvgjsLinearGradient1025)' stroke-linecap='round' class='TopRight'%3e%3c/path%3e%3cpath d='M801 281L436 646' stroke-width='6' stroke='url(%23SvgjsLinearGradient1026)' stroke-linecap='round' class='BottomLeft'%3e%3c/path%3e%3cpath d='M184 445L-185 814' stroke-width='10' stroke='url(%23SvgjsLinearGradient1025)' stroke-linecap='round' class='TopRight'%3e%3c/path%3e%3cpath d='M179 293L486 -14' stroke-width='10' stroke='url(%23SvgjsLinearGradient1026)' stroke-linecap='round' class='BottomLeft'%3e%3c/path%3e%3cpath d='M775 464L920 319' stroke-width='10' stroke='url(%23SvgjsLinearGradient1026)' stroke-linecap='round' class='BottomLeft'%3e%3c/path%3e%3cpath d='M294 189L556 -73' stroke-width='6' stroke='url(%23SvgjsLinearGradient1025)' stroke-linecap='round' class='TopRight'%3e%3c/path%3e%3cpath d='M95 108L300 -97' stroke-width='8' stroke='url(%23SvgjsLinearGradient1025)' stroke-linecap='round' class='TopRight'%3e%3c/path%3e%3cpath d='M277 496L657 116' stroke-width='6' stroke='url(%23SvgjsLinearGradient1025)' stroke-linecap='round' class='TopRight'%3e%3c/path%3e%3cpath d='M1306 325L961 670' stroke-width='8' stroke='url(%23SvgjsLinearGradient1026)' stroke-linecap='round' class='BottomLeft'%3e%3c/path%3e%3cpath d='M1343 110L1034 419' stroke-width='10' stroke='url(%23SvgjsLinearGradient1025)' stroke-linecap='round' class='TopRight'%3e%3c/path%3e%3cpath d='M439 206L825 -180' stroke-width='10' stroke='url(%23SvgjsLinearGradient1026)' stroke-linecap='round' class='BottomLeft'%3e%3c/path%3e%3cpath d='M182 320L327 175' stroke-width='10' stroke='url(%23SvgjsLinearGradient1025)' stroke-linecap='round' class='TopRight'%3e%3c/path%3e%3cpath d='M1208 274L1511 -29' stroke-width='8' stroke='url(%23SvgjsLinearGradient1025)' stroke-linecap='round' class='TopRight'%3e%3c/path%3e%3cpath d='M744 524L481 787' stroke-width='8' stroke='url(%23SvgjsLinearGradient1025)' stroke-linecap='round' class='TopRight'%3e%3c/path%3e%3cpath d='M830 451L989 292' stroke-width='10' stroke='url(%23SvgjsLinearGradient1026)' stroke-linecap='round' class='BottomLeft'%3e%3c/path%3e%3cpath d='M375 390L536 229' stroke-width='8' stroke='url(%23SvgjsLinearGradient1025)' stroke-linecap='round' class='TopRight'%3e%3c/path%3e%3cpath d='M1334 365L1084 615' stroke-width='10' stroke='url(%23SvgjsLinearGradient1025)' stroke-linecap='round' class='TopRight'%3e%3c/path%3e%3cpath d='M1354 119L1109 364' stroke-width='8' stroke='url(%23SvgjsLinearGradient1025)' stroke-linecap='round' class='TopRight'%3e%3c/path%3e%3cpath d='M175 251L395 31' stroke-width='6' stroke='url(%23SvgjsLinearGradient1025)' stroke-linecap='round' class='TopRight'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1024'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3clinearGradient x1='0%25' y1='100%25' x2='100%25' y2='0%25' id='SvgjsLinearGradient1025'%3e%3cstop stop-color='rgba(77%2c 244%2c 216%2c 0)' offset='0'%3e%3c/stop%3e%3cstop stop-color='rgba(77%2c 244%2c 216%2c 0.28)' offset='1'%3e%3c/stop%3e%3c/linearGradient%3e%3clinearGradient x1='100%25' y1='0%25' x2='0%25' y2='100%25' id='SvgjsLinearGradient1026'%3e%3cstop stop-color='rgba(77%2c 244%2c 216%2c 0)' offset='0'%3e%3c/stop%3e%3cstop stop-color='rgba(77%2c 244%2c 216%2c 0.28)' offset='1'%3e%3c/stop%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e");
-        }
-        
-        .contenedor__principal{
-            display: flex;
-            background-color: #371e37;
-            padding: 100px;
-            justify-content: center;
-            /* max-width: 1024px; */
-            margin-left: auto;
-            margin-right: auto;
-            gap: 20px;
-            flex-direction: column;
-            border-radius: 8px;
-            box-shadow:0px 3px 11px -7px #0009;;
-            background: rgb(55,30,55);
-            background: linear-gradient(90deg, rgb(0, 0, 0) 0%, rgba(55,30,55) 100%);
-            
-        }
-        
-       .contenedor__imagen{
-           width: 100%;
-           height: 350px;
-           border: 1px solid transparent;
-           object-fit: cover;
-           border-radius: 8px;
-           /* clip-path: circle(37% at 50% 50%); */
-           overflow: hidden;
-           transition: .2 ease-in-out;
-        }
-        
-        .contenedor__principal *{
-            /* border: 1px solid red; */
-        }
-        
-        .contenedor__imagen img {
-            width: 100%;
-            height: 350px;
-            object-fit: cover;
-            border-radius: 8px;
-            transition: .3s ease-in;
-        }
-        
-        .contenedor__imagen:hover {
-            border-color: blueviolet;
-        }
-        
-        .contenedor__imagen:hover img{
-            transform: scale(1.2);
-        }
-        
-        .contenedor__interno {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            gap: .1rem;
-            padding-left: 20px;
-            color: #fff;
-        }
-        
-        .contenedor__interno, .contenedor__interno p {
-        margin: 0;
-        text-align: center;
-        font-size: 1.3rem;
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    }
-    
-    @media (min-width: 600px){
-        .contenedor__principal{
-            flex-direction: row;
-        }
-        
-        .contenedor__imagen{
-            width: 350px;
-        }
-    }
-    
-    </style>
-
-<div class="contenedor__principal">
-    <div class="contenedor__imagen">
-        
-        <img src="https://scontent.fmtr1-1.fna.fbcdn.net/v/t39.30808-6/276154415_10225846482724032_5517149612850479003_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeFW0vam7hK1w2ySBrM1H-yVKeeo17oAKGIp56jXugAoYiTNPiaO8d0K3hi_zdZQTsc&_nc_ohc=-Od0BrvFtf8AX-_T9jb&_nc_ht=scontent.fmtr1-1.fna&oh=00_AT9KQYlPviUIF_6l6opqy46AuAz8sDVE5VoDIvczhajHUw&oe=62FB7FE6" alt="Una persona de pelo negro, sentado en su computadora diseñando su portafolio">
-    </div>
-    <div class="contenedor__interno">
-        <h2>My Name is Luis Carlos Rangel</h2>
-        <p>I'm Web Developer</p>
-    </div>
-</div>
-<style>
-    .contenedor__secundario{
-        /* border: 1px solid red; */
-    }
-    
-    .section {
-        /* border: 1px solid blue; */
-        width: 100%;
-        height: auto;
-        gap: 1rem;
-        max-width: 1200px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    
-    .contenedor__tarjetas {
-        /* border: 1px solid green; */
-        padding: 20px 0 45px;
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 1rem;
-    }
-    
-    .tarjeta {
-        /* border: 1px solid rgb(107, 8, 127); */
-        padding: 25px;
-        border-radius: 8px;
-        box-shadow: 5px 5px 15px -5px #0009;
-    }
-    
-    .tarjeta__interior {
-        text-align: center;
-    }
-    
-    .tarjeta__interior i {
-        font-size: 50px;
-    }
-
-    .tarjeta__interior p {
-        font-size: 17px;
-        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    }
-    
-    .tarjeta__interior .orange {
-        color: orangered;
-    }
-    
-    .tarjeta__interior .blue {
-        color: rgb(8, 87, 213);
-    }
-    
-    .tarjeta__interior .green {
-        color: rgb(13, 196, 13);
-    }
-    
-    .contenedor__servicios{
-        padding: 20px;
-        text-align: center;
-    }
-    
-       
-    @media (min-width: 600px) {
-        .contenedor__tarjetas {
-            grid-template-columns: repeat(3, 1fr);
-        }
-    }
-    </style>
-
-
-<style>
-    .contenedor__proyectos {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 3rem;
-        /* border: 1px solid red; */
-        max-width: 1024px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    
-    .proyecto {
-        /* border: 1px solid blue; */
-    }
-    
-    .proyecto__interior {
-        display: grid;
-        grid-template-columns: 1fr;
-        /* border: 2px solid green; */
-    }
-    
-    .proyecto__contenedor-imagen {
-        width: 100%;
-        object-fit: cover;
-        
-    }
-    
-    .proyecto__contenedor-imagen img {
-        width: 100%;
-        height: 335px;
-        object-fit: cover;
-        border: 1px solid transparent;
-        border-radius: 8px;
-    }
-    
-    .proyecto__contenedor-informacion {
-        /* border: 1px solid orange; */
-        padding: 20px;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-    }
-    
-    .proyecto__contenedor-informacion h2, .proyecto__contenedor-informacion p {
-        margin: 0;
-        padding-top: 40px;
-        font-size: 30px;
-    }
-    
-    .proyecto__boton {
-        background-color: #333;
-        color: #fff;
-        padding: 6px 10px;
-        border-radius: 4px;
-        border: none;
-        cursor: pointer;
-        transition:transform .3s;
-    }
-    
-    .proyecto__boton:hover{
-        background-color: #444;
-        transform: translateY(-4px);
-    }
-    
-    @media (min-width: 700px){
-        .contenedor__proyectos {
-            grid-template-columns: 1fr;
-        }
-        
-        .proyecto__interior {
-            grid-template-columns: 1fr 1fr;
-            
-        }
-        
-    }
-    </style>
-
-<main class="contenedor__secundario ">
-    <section class="section">
-        <h2 class="contenedor__servicios">Skills</h2>
-        <div class="contenedor__tarjetas">
-            <div class="tarjeta">
-                <div class="tarjeta__interior">
-                    <i class='bx bxl-html5 orange'></i>
-                    <p>HTML.</p>                    
-                </div>
-            </div>
-            <div class="tarjeta">
-                <div class="tarjeta__interior">
-                    <i class='bx bxl-css3 blue' ></i>
-                    <p>CSS.</p>                    
-                </div>
-            </div>            
-            <div class="tarjeta">
-                <div class="tarjeta__interior">
-                    <i class='bx bxl-nodejs green' ></i>
-                    <p>JAVASCRIPT.</p>                    
-                </div>
-            </div>
-            
-            
+  <body class="fondo">
+    <div class="navbar">
+      <div class="navbar__interior">
+        <div class="navbar__logo">
+          <a href="/">
+            <i class="bx bxs-mouse-alt"></i>
+            <span>LuisKR</span>
+          </a>
         </div>
-        <style>
-            .footer {
-              margin-top: 5rem;
-              background-color: #222;
-              color: #fff;
-            }
-      
-            .contenedor__footer {
-              display: grid;
-              grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-              max-width: 750px;
-              margin: 0 auto;
-              padding: 1rem 0 3rem;
-            }
-      
-            .contenedro__footer-item {
-              display: flex;
-              flex-direction: column;
-              align-items: center;
-            }
-      
-            .contenedro__footer-item ul {
-              margin: 0;
-              padding: 0;
-              list-style: none;
-            }
-      
-            .contenedro__footer-item a {
-              color: #ccc;
-              text-decoration: none;
-              transition: .3s ease-in-out;
-            }
-      
-            .contenedro__footer-item a:hover {
-              color: #fff;
-              text-decoration: underline;
-            }
-      
-            .social ul {
-              display: flex;
-              align-items: center;
-              gap: 1rem;
-            }
-      
-            .contenedor__footer-copy {
-              padding: 20px 0;
-              border-top: 1px solid #444;
-              text-align: center;
-              font-size: 12px;
-              color: #999;
-            }
-      
-            @media (min-width: 600px) {
-              .contenedor__footer {
-                grid-template-columns: repeat(3, 1fr);
-              }
-            }
-          </style>
-    </section>
-    <section class="section">
-        <h2 class="contenedor__servicios">Projects</h2>
-        <div class="contenedor__proyectos">
-            <div class="proyecto">
-                <div class="proyecto__interior">
-                    <div class="proyecto__contenedor-imagen">
-                        <img src="https://i.pinimg.com/564x/24/9f/f0/249ff09d126eee1137a1df14d13fb3e6.jpg" alt="img">
-                    </div>
-                    <div class="proyecto__contenedor-informacion">
-                        <h2>E-commerce</h2>
-                        <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, incidunt ipsum.</p> -->
-                        <div>
-                            <button class="proyecto__boton">github</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="proyecto">
-                <div class="proyecto__interior">
-                    <div class="proyecto__contenedor-imagen">
-                        <img src="https://cdn.dribbble.com/users/1818193/screenshots/6913062/cook_app_1x_zuairia_4x.jpg?compress=1&resize=1600x1200&vertical=top" alt="img">
-                    </div>
-                    <div class="proyecto__contenedor-informacion">
-                        <h2>Repositorio</h2>
-                        <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, incidunt ipsum.</p> -->
-                        <div>
-                            <button class="proyecto__boton">github</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="proyecto">
-                <div class="proyecto__interior">
-                    <div class="proyecto__contenedor-imagen">
-                        <img src="https://i.pinimg.com/564x/73/f1/06/73f1066b1fef55f436f6e050f758dd6f.jpg" alt="img">
-                    </div>
-                    <div class="proyecto__contenedor-informacion">
-                        <h2>Portafolio</h2>
-                        <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, incidunt ipsum.</p> -->
-                        <div>
-                            <button class="proyecto__boton">github</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="proyecto">
-                <div class="proyecto__interior">
-                    <div class="proyecto__contenedor-imagen">
-                        <img src="https://i.pinimg.com/564x/63/5b/e4/635be433fb1c848b763f646851b0f8e3.jpg" alt="img">
-                    </div>
-                    <div class="proyecto__contenedor-informacion">
-                        <h2>Carrito</h2>
-                        <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, incidunt ipsum.</p> -->
-                        <div>
-                            <button class="proyecto__boton">github</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div id="navbar__menu" class="navbar__menu">
+          <button id="navbar__cerrar" class="navbar__cerrar">
+            <i class="bx bx-x"></i>
+          </button>
+          <nav class="navbar__lista">
+            <a href="#" class="navbar__link">Home</a>
+            <a href="#" class="navbar__link">About</a>
+            <a href="#" class="navbar__link">Skills</a>
+            <a href="#" class="navbar__link">Projects</a>
+          </nav>
         </div>
-    </section>
-    
-    
-    
-</main>
+        <div class="navbar__btn">
+          <button id="navbar__btn" class="navbar__btn-accion">
+            <i class="bx bx-menu"></i>
+          </button>
+        </div>
+      </div>
+    </div>
 
- </div>
- <footer class="footer">
-    <div class="contenedor__footer">
-      <div class="contenedro__footer-item">
-        <h3>Resources:</h3>
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Skills</a></li>
-          <li><a href="#">Projects</a></li>
-        </ul>
+    <script>
+      const menu = document.getElementById("navbar__menu");
+      const abrir = document.getElementById("navbar__btn");
+      const cerrar = document.getElementById("navbar__cerrar");
+
+      abrir.addEventListener("click", (e) => {
+        menu.classList.add("mostrar__menu");
+      });
+
+      cerrar.addEventListener("click", (e) => {
+        menu.classList.remove("mostrar__menu");
+      });
+    </script>
+
+    <div class="contenedor__todo">
+      <!-- <h1>Hello, Welcome</h1> -->
+      <div class="contenedor__principal">
+        <div class="contenedor__imagen"></div>
+        <div class="contenedor__interno">
+          <h2 class="about__tittle">About</h2>
+          <h3>My Name is Luis Carlos Rangel</h3>
+          <p>I am a student passionate about
+            front-end web development, when I'm not
+            working I'm always creating things
+            New. In addition, I have knowledge in
+            technologies such as React, HTML5, CSS and
+            Javascript, I always want to learn things
+            new and offer all the knowledge that
+            I have acquired.</p>
+        </div>
       </div>
-      <div class="contenedro__footer-item">
-        <h3>Support:</h3>
-        <ul>
-          <li><a href="#">FAQ</a></li>
-          <li><a href="#">Services</a></li>
-        </ul>
-      </div>
-      <div class="contenedro__footer-item social">
-        <h3>Social:</h3>
-        <ul>
-          <li><a href="#"><i class='bx bxl-instagram'></i></a></li>
-          <li><a href="#"><i class='bx bxl-twitter'></i></a></li>
-          <li><a href="#"><i class='bx bxl-linkedin'></i></a></li>
-        </ul>
-      </div>
+      <main class="contenedor__secundario">       
+        <section class="section">
+          <h2 class="contenedor__servicios">Skills</h2>
+          <div class="contenedor__tarjetas">
+            <div class="tarjeta">
+              <div class="tarjeta__interior">
+                <i class="bx bxl-html5 orange"></i>
+                <p>HTML.</p>
+              </div>
+            </div>
+            <div class="tarjeta">
+              <div class="tarjeta__interior">
+                <i class="bx bxl-css3 blue"></i>
+                <p>CSS.</p>
+              </div>
+            </div>
+            <div class="tarjeta">
+              <div class="tarjeta__interior">
+                <i class="bx bxl-nodejs green"></i>
+                <p>React js.</p>
+              </div>
+            </div>
+              <div class="tarjeta">
+                <div class="tarjeta__interior">
+                  <i class='bx bxl-react sky' ></i>
+                  <p>React.</p>
+            </div>
+          </div>
+              <div class="tarjeta">
+                <div class="tarjeta__interior">
+                  <i class='bx bxl-redux purple' ></i>
+                  <p>Redux.</p>
+                </div>
+              </div>
+              <div class="tarjeta">
+                <div class="tarjeta__interior">
+                  <i class='bx bxl-javascript yellow'></i>
+                  <p>Javascript.</p>
+                  </div>
+          
+        </section>
+        <section class="section">
+          <h2 class="contenedor__servicios">Projects</h2>
+          <div class="contenedor__proyectos">
+            <div class="proyecto">
+              <div class="proyecto__interior">
+                <div class="proyecto__contenedor-imagen">
+                  <img
+                    src="/assets/img/wheater-api.png"
+                    alt="img"
+                  />
+                </div>
+                <div class="proyecto__contenedor-informacion">
+                  <h2>Weather Api</h2>
+                  <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, incidunt ipsum.</p> -->
+                  <div>
+                    <button class="proyecto__boton"><a href="https://wheater-app-luis.netlify.app/" target="_blank">Deploy</a></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="proyecto">
+              <div class="proyecto__interior">
+                <div class="proyecto__contenedor-imagen">
+                  <img
+                    src="/assets/img/crud-api.png"
+                    alt="img"
+                  />
+                </div>
+                <div class="proyecto__contenedor-informacion">
+                  <h2>Crud User Api</h2>
+                  <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, incidunt ipsum.</p> -->
+                  <div>
+                    <button class="proyecto__boton"><a href="https://react-crud-user-app.netlify.app/" target="_blank">Deploy</a></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="proyecto">
+              <div class="proyecto__interior">
+                <div class="proyecto__contenedor-imagen">
+                  <img
+                    src="/assets/img/rick-and-morthy.png"
+                    alt="img"
+                  />
+                </div>
+                <div class="proyecto__contenedor-informacion">
+                  <h2>Rick And Morthy Api</h2>
+                  <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, incidunt ipsum.</p> -->
+                  <div>
+                    <button class="proyecto__boton"><a href="https://rick-and-morty-react-lcrs.netlify.app/" target="_blank">Deploy</a></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="proyecto">
+              <div class="proyecto__interior">
+                <div class="proyecto__contenedor-imagen">
+                  <img
+                    src="/assets/img/poke-api.png"
+                    alt="img"
+                  />
+                </div>
+                <div class="proyecto__contenedor-informacion">
+                  <h2>Poke-Api</h2>
+                  <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, incidunt ipsum.</p> -->
+                  <div>
+                    <button  class="proyecto__boton"><a href="https://poke-api-lcr.netlify.app/" target='_blank'>Deploy</a></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
     </div>
-    <div class="contenedor__footer-copy">
-      <p>Todos los derechos reservados 2022</p>
-    </div>
-  </footer>
-</body>
+    <footer class="footer">
+      <div class="contenedor__footer">
+        <div class="contenedro__footer-item">
+          <h3>Resources:</h3>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Skills</a></li>
+            <li><a href="#">Projects</a></li>
+          </ul>
+        </div>
+        <div class="contenedro__footer-item">
+          <h3>Support:</h3>
+          <ul>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Services</a></li>
+          </ul>
+        </div>
+        <div class="contenedro__footer-item social">
+          <h3>Social:</h3>
+          <ul>
+            <li>
+              <a href="https://www.facebook.com/luis.ranglsierra" target="_blank"><i class='bx bxl-facebook-circle'></i></a>
+            </li>
+            <li>
+              <a href="https://wa.link/53tncz" target="_blank"><i class='bx bxl-whatsapp'></i></a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/luis-carlos-rangel-641512249/" target="_blank"><i class="bx bxl-linkedin"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="contenedor__footer-copy">
+        <p class="footer__p"> ©️ Todos los derechos reservados 2022</p>
+      </div>
+    </footer>
+  </body>
 </html>
